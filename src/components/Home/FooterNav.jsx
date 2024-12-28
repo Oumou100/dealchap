@@ -32,6 +32,7 @@ const FooterNav = () => {
         zIndex: 1000,
       }}
     >
+              <div className="d-flex" style={{ flex: 1, justifyContent: 'space-evenly' }}>
       <Link
         href="/"
         className={`text-center nav-item ${getLinkClass('/')}`} // Applique la classe dynamique
@@ -47,8 +48,9 @@ const FooterNav = () => {
         <Image src="/assets/telegram.svg" alt="Telegram" width={24} height={24} />
         <div className="small">Chat</div>
       </Link>
-
+      </div>
       {/* Bouton central /add */}
+      <div style={{ width: '65px', display: 'flex', justifyContent: 'center' }}>
       <Link
         href="/add"
         className="text-center text-white rounded-circle d-flex justify-content-center align-items-center nav-item"
@@ -62,7 +64,8 @@ const FooterNav = () => {
       >
         <FaPlus size={20} />
       </Link>
-
+      </div>
+      <div className="d-flex" style={{ flex: 1, justifyContent: 'space-evenly' }}>
       <Link
         href="/ads"
         className={`text-center nav-item ${getLinkClass('/ads')}`} // Applique la classe dynamique
@@ -78,6 +81,7 @@ const FooterNav = () => {
         <Image src="/assets/user.svg" alt="User" width={24} height={24} />
         <div className="small">Profile</div>
       </Link>
+      </div>
     </div>
   );
 };

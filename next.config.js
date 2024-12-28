@@ -1,5 +1,8 @@
 
 /* eslint-disable @typescript-eslint/no-var-requires */
+const withPWA = require('next-pwa')({
+    dest: 'public'
+  })
 const path = require('path')
 require('dotenv').config()
 
@@ -9,7 +12,7 @@ const nextConfig = {
         unoptimized: true,
     },
     trailingSlash: false,
-    reactStrictMode: false,
+    reactStrictMode: true,
     webpack: (config, { isServer }) => {
         if (isServer) {
             require('./scripts/sitemap-generator')
@@ -22,5 +25,5 @@ const nextConfig = {
     }
 }
 
-module.exports = nextConfig
+module.exports = withPWA(nextConfig);
 
