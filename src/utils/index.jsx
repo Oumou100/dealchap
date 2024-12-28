@@ -2,7 +2,6 @@
 import toast from 'react-hot-toast';
 import enTranslation from './locale/en.json'
 import { store } from '../redux/store'
-import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
 import { CurrentLanguageData } from '@/redux/reuducer/languageSlice';
 import { useSelector } from 'react-redux';
 import { logoutSuccess } from '../redux/reuducer/authSlice';
@@ -329,38 +328,39 @@ export const loadStripeApiKey = () => {
 }
 
 
-export const convertToMp3 = async (blob) => {
-  // Initialize FFmpeg
-  const ffmpeg = createFFmpeg({ log: true });
 
-  try {
-    // Load FFmpeg
-    await ffmpeg.load();
+// export const convertToMp3 = async (blob) => {
+//   // Initialize FFmpeg
+//   const ffmpeg = createFFmpeg({ log: true });
 
-    // Write the audio Blob to FFmpeg's file system
-    ffmpeg.FS('writeFile', 'input.webm', await fetchFile(blob));
+//   try {
+//     // Load FFmpeg
+//     await ffmpeg.load();
 
-    // Run FFmpeg command to convert the audio to MP3
-    await ffmpeg.run('-i', 'input.webm', 'output.mp3');
+//     // Write the audio Blob to FFmpeg's file system
+//     ffmpeg.FS('writeFile', 'input.webm', await fetchFile(blob));
 
-    // Read the converted MP3 file from FFmpeg's file system
-    const mp3Data = ffmpeg.FS('readFile', 'output.mp3');
+//     // Run FFmpeg command to convert the audio to MP3
+//     await ffmpeg.run('-i', 'input.webm', 'output.mp3');
 
-    // Create a Blob from the MP3 data
-    const mp3Blob = new Blob([mp3Data.buffer], { type: 'audio/mp3' });
+//     // Read the converted MP3 file from FFmpeg's file system
+//     const mp3Data = ffmpeg.FS('readFile', 'output.mp3');
 
-    // Return the MP3 Blob
-    return mp3Blob;
-  } catch (error) {
-    console.error('Error converting audio to MP3:', error);
-    throw error;
-  } finally {
-    // Clean up FFmpeg resources
-    await ffmpeg.FS('unlink', 'input.webm');
-    await ffmpeg.FS('unlink', 'output.mp3');
-    await ffmpeg.exit();
-  }
-};
+//     // Create a Blob from the MP3 data
+//     const mp3Blob = new Blob([mp3Data.buffer], { type: 'audio/mp3' });
+
+//     // Return the MP3 Blob
+//     return mp3Blob;
+//   } catch (error) {
+//     console.error('Error converting audio to MP3:', error);
+//     throw error;
+//   } finally {
+//     // Clean up FFmpeg resources
+//     await ffmpeg.FS('unlink', 'input.webm');
+//     await ffmpeg.FS('unlink', 'output.mp3');
+//     await ffmpeg.exit();
+//   }
+// };
 
 
 // check is Rtl

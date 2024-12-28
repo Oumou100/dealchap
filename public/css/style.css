@@ -7442,7 +7442,7 @@ input::-webkit-inner-spin-button {
 
 .adListingSect .formBtns {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 12px;
   margin-top: 40px;
   flex-direction: row !important;
