@@ -47,7 +47,7 @@ const Header = () => {
     const UserData = useSelector(userSignUpData)
     const systemSettings = useSelector(settingsData)
     const settings = systemSettings?.data
-    console.log("Données des settings:", settings);
+    // console.log("Données des settings:", settings);
     const cateData = useSelector(CategoryData)
     const languages = settings && settings?.languages
     const { signOut } = FirebaseData();
@@ -65,7 +65,7 @@ const Header = () => {
     const lat = cityData?.lat
     const lng = cityData?.long
     const CurrentLanguage = useSelector(CurrentLanguageData);
-    console.log('Redux Current Language:', CurrentLanguage);
+    // console.log('Redux Current Language:', CurrentLanguage);
     const [IsShowCatDrop, setIsShowCatDrop] = useState(false)
     const [MenuData, setMenuData] = useState(null)
     const [IsShowOtherCat, setIsShowOtherCat] = useState(false)

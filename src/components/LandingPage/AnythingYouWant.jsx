@@ -20,38 +20,38 @@ const AnythingYouWant = () => {
     const handleFlagClick = (country) => {
         const countryData = {
             "cote-ivoire": {
-                lat: 5.345317,
-                long: -4.024429,
-                city: "Abidjan",
-                state: "Lagunes",
+                lat: 7.539988999999999,
+                long: -5.547079999999999,
+                city: undefined,
+                state: undefined,
                 country: "Côte d'Ivoire"
             },
             mali: {
-                lat: 12.6392,
-                long: -8.0029,
-                city: "Bamako",
-                state: "District de Bamako",
+                lat: 17.570692,
+                long: -3.996166,
+                city: undefined,
+                state: undefined,
                 country: "Mali"
             },
             togo: {
-                lat: 6.1319,
-                long: 1.2223,
-                city: "Lomé",
-                state: "Région Maritime",
+                lat: 8.619543,
+                long: 0.824782,
+                city: undefined,
+                state: undefined,
                 country: "Togo"
             },
             burkina: {
-                lat: 12.3714,
-                long: -1.5197,
-                city: "Ouagadougou",
-                state: "Centre",
+                lat: 12.238333,
+                long: -1.561593,
+                city: undefined,
+                state: undefined,
                 country: "Burkina Faso"
             },
             senegal: {
-                lat: 14.6937,
-                long: -17.4441,
-                city: "Dakar",
-                state: "Région de Dakar",
+                lat: 14.497401,
+                long: -14.452362,
+                city: undefined,
+                state: undefined,
                 country: "Sénégal"
             }
         };
