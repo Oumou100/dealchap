@@ -147,7 +147,7 @@ const EditProfile = () => {
                 </div>
 
                 <div className="row profile_sidebar">
-                    <ProfileSidebar />
+                    {/* <ProfileSidebar /> */}
                     <div className="col-lg-9 p-0">
                         <div className="profile_content">
 

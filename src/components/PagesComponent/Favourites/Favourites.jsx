@@ -88,7 +88,7 @@ const Favourites = () => {
                     <h4 className="pop_cat_head">{t("myFavorites")}</h4>
                 </div>
                 <div className="row profile_sidebar">
-                    <ProfileSidebar />
+                    {/* <ProfileSidebar /> */}
                     <div className="col-lg-9 p-0">
                         <div className="container">
                             <div className="row ad_card_wrapper">

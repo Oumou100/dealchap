@@ -9,7 +9,7 @@ const Password = () => {
                 <h4 className="pop_cat_head">{t('password')}</h4>
             </div>
             <div className="row profile_sidebar">
-                <ProfileSidebar />
+                {/* <ProfileSidebar /> */}
                 <div className="col-lg-9 p-0">
                     <div className="profile_content">
                         <div className='personal_info'>

@@ -98,7 +98,7 @@ const Ads = () => {
                     </div>
                 </div>
                 <div className="row profile_sidebar">
-                    <ProfileSidebar />
+                    {/* <ProfileSidebar /> */}
                     <div className="col-lg-9 p-0">
                         <div className="container">
                             <div className="row">
